@@ -1,6 +1,6 @@
 # School_Scraping
 
-Python: 3.9.1 \\
+Python: 3.9.1
 
 Derek Lu
 Joseph Nam
