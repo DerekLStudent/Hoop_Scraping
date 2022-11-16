@@ -9,7 +9,7 @@ class scraper_model:
         self.professor = None
         self.courseIterator = None
         self.cart = None
-    def scrape_courses(class_name, class_level):
+    def scrape_courses(self, class_name, class_level):
         URL = "https://classes.colorado.edu/"
         r = requests.get(URL)
         print(r.content)

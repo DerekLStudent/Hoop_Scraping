@@ -7,9 +7,12 @@ class driver:
         self.controller = controller(scrape_model)
         self.view = view(scrape_model, self.controller)
     def setup_model(self):
-        print("To setup your scraping session, please enter in you username and password at the prompts")
-        #TODO user input, then send it to controller to parameterize the model
+        # print("To setup your scraping session, please enter in you username and password at the prompts")
+        # #TODO user input, then send it to controller to parameterize the model
         print("Please enter in an initial query to get started:")
+        c_name = input("Please give class name:")
+        c_level = input("Please give class number")
+        self.controller.scrape_courses(c_name, c_level)
         #TODO user input, then send it to to controller to start initial query in the model
     def run_scraping_instance(self):
         instance_done = False
