@@ -10,7 +10,7 @@ Joseph Nam
 
 Hello World!
 
-This is the GitHub Repo for the final project of OOAD that presents a simple GUI of scraped data from CU class search.
+This is the GitHub Repo for the final project of OOAD that presents a simple GUI to build a basketball roster from scraped data.
 
 ## Dependencies
 ___
