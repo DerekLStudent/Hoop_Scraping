@@ -3,3 +3,9 @@ class scraper_model:
         self.username = ""
         self.password = ""
         self.cur_data = {}
+        self.course = None
+        self.professor = None
+        self.courseIterator = None
+        self.cart = None
+    def query(qs):
+        pass
