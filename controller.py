@@ -7,7 +7,7 @@ class controller:
     def model_set_UN(self, un):
         self.model.username = un
     def scrape_courses(self, cname,clevel):
-        #self.model.scrape_courses(cname, clevel)
+        self.model.scrape_courses(cname, clevel)
         #pass
     def scrape_profs(self, pname):
         pass

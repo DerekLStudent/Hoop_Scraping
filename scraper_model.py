@@ -1,3 +1,5 @@
+import requests
+
 class scraper_model:
     def __init__(self):
         self.username = ""
@@ -7,5 +9,7 @@ class scraper_model:
         self.professor = None
         self.courseIterator = None
         self.cart = None
-    def query(qs):
-        pass
+    def scrape_courses(class_name, class_level):
+        URL = "https://classes.colorado.edu/"
+        r = requests.get(URL)
+        print(r.content)
