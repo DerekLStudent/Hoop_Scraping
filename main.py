@@ -1,6 +1,6 @@
 from driver import driver
 def main():
-    print("Welcome to School Scraper")
+    print("Welcome to Hoop Scraper")
     scraping_instance = driver()
 
     scraping_instance.run_scraping_instance()

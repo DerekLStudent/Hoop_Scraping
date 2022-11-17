@@ -6,8 +6,6 @@ class controller:
         self.model.password = pw
     def model_set_UN(self, un):
         self.model.username = un
-    def scrape_courses(self, cname,clevel):
-        self.model.scrape_courses(cname, clevel)
+    def scrape_team(self, cname,clevel):
+        self.model.scrape_team(cname, clevel)
         #pass
-    def scrape_profs(self, pname):
-        pass
