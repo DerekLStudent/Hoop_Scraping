@@ -2,14 +2,10 @@ import requests
 
 class scraper_model:
     def __init__(self):
-        self.username = ""
-        self.password = ""
         self.cur_data = {}
-        self.course = None
-        self.professor = None
-        self.courseIterator = None
-        self.cart = None
-    def scrape_team(self, class_name, class_level):
-        URL = "https://classes.colorado.edu/"
+        self.playerIterator = None
+        self.roster = None
+    def scrape_team(self, team_name, team_year):
+        URL = "https://www.basketball-reference.com/teams/{}/{}.html"
         r = requests.get(URL)
         print(r.content)
