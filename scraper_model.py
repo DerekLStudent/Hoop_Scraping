@@ -17,8 +17,19 @@ class scraper_model:
     
     def __init__(self):
         self.playerIterator = None
-        self.roster = None
+        self.roster = roster()
         self.players = []
+        self.playersDf = None
+        
+    def displayRoster(self):
+        roster.displayFullRoster()
+        
+    def displayPlayersSearched(self, team_name, team_year):
+        print(team_year, team_name, "roster")
+        
+        for foundPlayer in self.players:
+            foundPlayer.displayPlayer()
+            print()
         
     def scrape_team(self, team_name, team_year):
         #ERROR NOTES: Teams before 3 point era have different tables
@@ -81,8 +92,8 @@ class scraper_model:
             
             self.players.append(player(finalTable['Name'][i], finalTable['Year'][i], finalTable['Pos'][i], finalTable['Ht'][i], currStats))
             
-        for foundPlayer in self.players:
-            foundPlayer.displayPlayer()
-            print()
+        self.playersDf = finalTable
+            
+        self.displayPlayersSearched(team_name, team_year)
         
         
