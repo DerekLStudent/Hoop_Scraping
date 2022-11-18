@@ -1,3 +1,5 @@
+from player import player
+
 class roster:
     def __init__(self):
         self.fullRoster = []

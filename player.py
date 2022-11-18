@@ -1,3 +1,5 @@
+from gamestats import gamestats
+
 class player:
     def __init__(self, name, year, position, height, stats):
         self.name = name
@@ -14,7 +16,11 @@ class player:
         self.inRoster = False
         
     def displayPlayer(self):
-        print()
+        print("Name:", self.name)
+        print("Year:", self.year)
+        print("Pos:", self.position)
+        print("Ht:", self.height)
+        self.stats.displayStats()
     
         
         
