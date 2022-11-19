@@ -9,15 +9,13 @@ class driver:
         self.view = view(scrape_model, self.controller)
     
     def setup_model(self):
-        # print("To setup your scraping session, please enter in you username and password at the prompts")
-        # #TODO user input, then send it to controller to parameterize the model
+        #Initial setup for model.
         print("Please enter in an initial query to get started:")
         t_name = input("Please give a team name:").lower()
         t_year = int(input("Please give a year:"))
         if(t_name not in constants.TEAM_NAME_ACRONYM or t_year > 2022):
             print("invalid inputs, closing program.")
         self.controller.scrape_team(t_name, t_year)
-        #TODO user input, then send it to to controller to start initial query in the model
     
     def run_scraping_instance(self):
         instance_done = False
