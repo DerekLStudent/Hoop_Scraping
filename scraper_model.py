@@ -93,6 +93,8 @@ class scraper_model:
             self.players.append(player(finalTable['Name'][i], finalTable['Year'][i], finalTable['Pos'][i], finalTable['Ht'][i], currStats))
             
         self.playersDf = finalTable
+        
+        print(finalTable)
             
         self.displayPlayersSearched(team_name, team_year)
         
