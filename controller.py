@@ -9,3 +9,9 @@ class controller:
 
     def get_playersDf(self):
         return self.model.playersDf
+
+    # def add_player(self):
+    #     if
+    # def remove_player(self):
+    # def get_roster(self):
+    #     return self.model.roster
