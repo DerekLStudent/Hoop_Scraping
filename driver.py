@@ -6,7 +6,7 @@ class driver:
     def __init__(self):
         scrape_model = scraper_model()
         self.controller = controller(scrape_model)
-        self.view = view(scrape_model, self.controller)
+        self.view = view(self.controller)
     
     def setup_model(self):
         #Initial setup for model.
@@ -18,8 +18,6 @@ class driver:
         self.controller.scrape_team(t_name, t_year)
     
     def run_scraping_instance(self):
-        instance_done = False
-        self.setup_model()
-        while not instance_done:
-            break
-        print("Closing scraping instance!")
+        #self.setup_model()
+        self.view.run_view()
+        print("Closing application!")

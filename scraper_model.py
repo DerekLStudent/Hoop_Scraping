@@ -34,6 +34,10 @@ class scraper_model:
     def scrape_team(self, team_name, team_year):
         #ERROR NOTES: Teams before 3 point era have different tables
         
+        self.players = []
+        if self.playersDf != None:
+            self.playersDf = self.playersDf.iloc[0:0]
+
         URL = "https://www.basketball-reference.com/teams/{}/{}.html".format(constants.TEAM_NAME_ACRONYM[team_name], team_year)
         r = requests.get(URL).text
         
