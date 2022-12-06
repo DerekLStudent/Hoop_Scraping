@@ -7,12 +7,6 @@ class roster:
         self.fullRoster = []
         self.playIter = player_iterator(self.fullRoster)
         
-    def playerInRoster(self, player):
-        for man in self.fullRoster:
-            if man.name == player.name and man.year == player.year:
-                return True
-        
-        return False
     
     def getAvgPoints(self):
         totalSum = 0
@@ -20,6 +14,14 @@ class roster:
             totalSum += float(ppg)
             
         return totalSum / len(self.fullRoster)
+    
+        
+    def playerInRoster(self, player):
+        for man in self.fullRoster:
+            if man.name == player.name and man.year == player.year:
+                return True
+        
+        return False
         
     def addToRoster(self, player):
         if not self.playerInRoster(player):
@@ -29,12 +31,14 @@ class roster:
             else:
                 print("You can only have 15 players on a roster. Who do you want to remove?")
                 self.displayFullRoster()
+                
         
     def clearLastPlayer(self):
         self.fullRoster.pop()
             
     def clearRoster(self):
         self.fullRoster.clear()
+        
             
     def rosterDF(self):
         perGameHeaders = ['Name','Year','Pos','Ht','PPG','RPG','APG','SPG','BPG','2P%','3P%','FT%','MPG']

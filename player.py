@@ -7,13 +7,6 @@ class player:
         self.position = position
         self.height = height
         self.stats = stats
-        self.inRoster = False
-        
-    def addToRoster(self):
-        self.inRoster = True
-        
-    def removeFromRoster(self):
-        self.inRoster = False
         
     def displayPlayer(self):
         print("Name:", self.name)

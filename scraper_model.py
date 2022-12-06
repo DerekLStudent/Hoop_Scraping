@@ -6,7 +6,6 @@ import pandas as pd
 
 from player import player
 from gamestats import gamestats
-from roster import roster
 
 class scraper_model:
     def __new__(cls):
@@ -16,19 +15,8 @@ class scraper_model:
         return cls.instance
     
     def __init__(self):
-        self.playerIterator = None
         self.players = []
         self.playersDf = None
-        
-    def displayRoster(self):
-        self.roster.displayFullRoster()
-        
-    def displayPlayersSearched(self, team_name, team_year):
-        print(team_year, team_name, "roster")
-        
-        for foundPlayer in self.players:
-            foundPlayer.displayPlayer()
-            print()
         
     def scrape_team(self, team_name, team_year):
         #ERROR NOTES: Teams before 3 point era have different tables

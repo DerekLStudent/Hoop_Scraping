@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+
 from side_module import side_module
 from roster import roster
 from constants import TEAM_NAME_ACRONYM
@@ -27,7 +28,7 @@ class view:
         st.title("Hoop Scraping")
         self.side_module.display_side_module()
 
-        tab1, tab2, tab3, tab4 = st.tabs(["Team Builder", "Choose Players", "Roster", "Glossary"])
+        tab1, tab2, tab3 = st.tabs(["Team Builder", "Choose Players", "Roster"])
         
         with tab1:
             if self.controller.get_playersDf() is not None:
@@ -59,5 +60,4 @@ class view:
                     st.write("New Roster Look")
                     st.write(st.session_state.rosterState.rosterDF())
             
-        with tab4:
-            st.table(list(TEAM_NAME_ACRONYM))
+        
