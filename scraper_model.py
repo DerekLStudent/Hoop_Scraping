@@ -17,12 +17,11 @@ class scraper_model:
     
     def __init__(self):
         self.playerIterator = None
-        self.roster = roster()
         self.players = []
         self.playersDf = None
         
     def displayRoster(self):
-        roster.displayFullRoster()
+        self.roster.displayFullRoster()
         
     def displayPlayersSearched(self, team_name, team_year):
         print(team_year, team_name, "roster")
@@ -79,9 +78,8 @@ class scraper_model:
                 'Ht': columns[2].text
             }, ignore_index=True)
         
-        
         finalTable = rosterData.merge(statsData)
-        #print(finalTable)
+        
         
         for i in finalTable.index:
             currStats = gamestats(finalTable['PPG'][i],
@@ -97,9 +95,5 @@ class scraper_model:
             self.players.append(player(finalTable['Name'][i], finalTable['Year'][i], finalTable['Pos'][i], finalTable['Ht'][i], currStats))
             
         self.playersDf = finalTable
-        
-        print(finalTable)
-            
-        self.displayPlayersSearched(team_name, team_year)
         
         

@@ -2,10 +2,11 @@ from scraper_model import scraper_model
 from view import view
 from controller import controller
 import constants
+
 class driver:
     def __init__(self):
-        scrape_model = scraper_model()
-        self.controller = controller(scrape_model)
+        self.scrape_model = scraper_model()
+        self.controller = controller(self.scrape_model)
         self.view = view(self.controller)
     
     def setup_model(self):
@@ -20,4 +21,5 @@ class driver:
     def run_scraping_instance(self):
         #self.setup_model()
         self.view.run_view()
-        print("Closing application!")
+        print("Ran Scraping Instance...")
+        

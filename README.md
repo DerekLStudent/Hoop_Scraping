@@ -28,9 +28,9 @@ In Anaconda prompt, run:
 ## Running the Code
 ___
 
-On the home directory, run in Anaconda prompt:
+In a terminal, run:
 
-`python main.py`
+`streamlit run main.py`
 
 
 And view the project in the console, as well as, in localhost through the browser
@@ -38,4 +38,8 @@ And view the project in the console, as well as, in localhost through the browse
 ## Notes
 
 Project 6 doc is called "Project 6 Update"
+
+Project 7 report is called "Final Report"
+
+Project 7 video is called "Demonstration"
 
