@@ -41,6 +41,12 @@ And view the project in the console, as well as, in localhost through the browse
 ## How To Use The App
 ___
 
+Look up a team with it's name and year.
+
+Select Players
+
+View Roster
+
 ## Notes
 
 Project 6 doc is called "Project 6 Update"
