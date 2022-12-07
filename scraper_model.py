@@ -1,3 +1,5 @@
+#SINGLETON DESIGN PATTERN USED
+
 import requests
 import re
 import constants
@@ -8,29 +10,32 @@ from player import player
 from gamestats import gamestats
 
 class scraper_model:
+    #singleton instance function, only one instance of the scraper model needed
     def __new__(cls):
-        #Singleton
         if not hasattr(cls, 'instance'):
             cls.instance = super(scraper_model, cls).__new__(cls)
         return cls.instance
     
+    #initialize with a players list and players dataframe
     def __init__(self):
         self.players = []
         self.playersDf = None
         
+    #using beautiful soup, scrape data of a given NBA team in a given year from www.basketball-reference.com
     def scrape_team(self, team_name, team_year):
         #ERROR NOTES: Teams before 3 point era have different tables
         
+        #set player list and dataframe to empty
         self.players = []
         if self.playersDf != None:
             self.playersDf = self.playersDf.iloc[0:0]
 
+        #set up scraper and retrieve data from team page
         URL = "https://www.basketball-reference.com/teams/{}/{}.html".format(constants.TEAM_NAME_ACRONYM[team_name], team_year)
         r = requests.get(URL).text
-        
         soup = BeautifulSoup(r, 'html.parser')
 
-
+        #build a dataframe with the main per game statistics we want to show for each player
         perGameTable = soup.find('table', id='per_game')
         perGameHeaders = ['Name','PPG','RPG','APG','SPG','BPG','2P%','3P%','FT%','MPG']
         statsData = pd.DataFrame(columns = perGameHeaders)
@@ -52,6 +57,7 @@ class scraper_model:
             }, ignore_index=True)
         
         
+        #build a dataframe with the main general facts we want to show for each player (year, position, height)
         rosterTable = soup.find('table', id='roster')
         rosterHeaders = ['Name','Year','Pos','Ht']
         rosterData = pd.DataFrame(columns = rosterHeaders)
@@ -66,9 +72,10 @@ class scraper_model:
                 'Ht': columns[2].text
             }, ignore_index=True)
         
+        #merger the two tables
         finalTable = rosterData.merge(statsData)
         
-        
+        #create player objects and fill them in the players list
         for i in finalTable.index:
             currStats = gamestats(finalTable['PPG'][i],
                                   finalTable['RPG'][i],
@@ -82,6 +89,7 @@ class scraper_model:
             
             self.players.append(player(finalTable['Name'][i], finalTable['Year'][i], finalTable['Pos'][i], finalTable['Ht'][i], currStats))
             
+        #set players dataframe
         self.playersDf = finalTable
         
         
