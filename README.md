@@ -47,6 +47,8 @@ Look up a team with it's name and year.
 
 Select Players
 
+![](https://github.com/DerekLStudent/Hoop_Scraping/blob/main/choose_players.gif)
+
 View Roster
 
 ## Notes
