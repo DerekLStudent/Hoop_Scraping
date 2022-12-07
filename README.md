@@ -1,9 +1,9 @@
 # Hoop_Scraping
 
-Python: 3.9.1
-
 Derek Lu
 Joseph Nam
+
+Language version: Python: 3.9.1
 
 # INTRODUCTION
 ------------
