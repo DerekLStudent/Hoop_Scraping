@@ -1,6 +1,7 @@
 # Hoop_Scraping
 
 Derek Lu
+
 Joseph Nam
 
 Language version: Python: 3.9.1
@@ -25,15 +26,20 @@ In Anaconda prompt, run:
 
 `pip install numpy`
 
+`pip install requests`
+
 ## Running the Code
 ___
 
-In a terminal, run:
+In Anaconda prompt (Must be Anaconda Prompt to work on Windows, https://docs.streamlit.io/library/get-started/installation), run:
 
 `streamlit run main.py`
 
 
 And view the project in the console, as well as, in localhost through the browser
+
+## How To Use The App
+___
 
 ## Notes
 
