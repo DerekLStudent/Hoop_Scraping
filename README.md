@@ -49,7 +49,9 @@ Select Players
 
 ![](https://github.com/DerekLStudent/Hoop_Scraping/blob/main/choose_players.gif)
 
-View Roster
+View Roster and see how it stacks up!
+
+![](https://github.com/DerekLStudent/Hoop_Scraping/blob/main/roster.gif)
 
 ## Notes
 
