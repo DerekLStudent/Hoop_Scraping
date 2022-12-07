@@ -1,3 +1,5 @@
+#Dictionary matching full team names to their acronym
+#Acronym used for scraping the basketball reference website
 TEAM_NAME_ACRONYM = {
     "atlanta hawks":"ATL",
     "brooklyn nets":"BKN",

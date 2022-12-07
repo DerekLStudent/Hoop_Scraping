@@ -45,7 +45,5 @@ ___
 
 Project 6 doc is called "Project 6 Update"
 
-Project 7 report is called "Final Report"
-
-Project 7 video is called "Demonstration"
+Project 7 video, final report, and class diagrams found in the "Project7Deliverables" folder
 

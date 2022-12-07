@@ -1,3 +1,8 @@
+#Joseph Nam and Derek Lu
+#Hoop Scraping
+
+#Run application in terminal with command "streamlit run main.py"
+
 from driver import driver
 
 def main():

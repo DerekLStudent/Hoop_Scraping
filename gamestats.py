@@ -1,15 +1,17 @@
+#class to organize a players per game stats
 class gamestats:
     def __init__(self, PPG, RPG, APG, SPG, BPG, FTPercent, TwosPercent, ThreesPercent, MPG):
-        self.PPG = PPG
-        self.RPG = RPG
-        self.APG = APG
-        self.SPG = SPG
-        self.BPG = BPG
-        self.FTPercent = FTPercent
-        self.TwosPercent = TwosPercent
-        self.ThreesPercent = ThreesPercent
-        self.MPG = MPG
+        self.PPG = PPG  #points per game
+        self.RPG = RPG  #rebounds per game
+        self.APG = APG  #assists per game
+        self.SPG = SPG  #steals per game
+        self.BPG = BPG  #blocks per game
+        self.FTPercent = FTPercent              #free throw percentage
+        self.TwosPercent = TwosPercent          #two point percentage
+        self.ThreesPercent = ThreesPercent      #three point percentage
+        self.MPG = MPG  #minutes per game
         
+    #print to console test function
     def displayStats(self):
         print("PPG:", self.PPG)
         print("RPG:", self.RPG)
